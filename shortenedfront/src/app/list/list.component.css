@@ -1,0 +1,45 @@
+section{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1061;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background-color: #ffffffdc;
+
+}
+#section{
+  background-color: aliceblue;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 50%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  animation: go-back .7s normal ;
+  transition: all ease-out 3s;
+  }
+  section > div > input{
+    width: 75%;
+    z-index: 1162;
+  }
+  small{
+    width: 70%;
+    text-align: left;
+    opacity: .8;
+  }
+
+  @keyframes go-back {
+    from {
+      transform: translatey(-30px);
+    }
+    to {
+      transform: translatey(0px);
+    }
+  }
+
+

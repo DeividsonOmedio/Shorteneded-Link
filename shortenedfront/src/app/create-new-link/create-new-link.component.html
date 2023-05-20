@@ -1,0 +1,27 @@
+<h3>Criar novo Link</h3>
+
+<form >
+
+<section id="titleSection">
+<label class="" for="titulo">Título</label>
+<input class="form-control" type="text" name="title" id="title" [value]="titleholder" (input)="titleholder= $any($event.target).value">
+</section>
+<section id="urlsection">
+  <label for="destino">Link de Destino</label>
+  <input class="form-control" type="text" name="url" id="url" [value]="placeholder" (input)="placeholder= $any($event.target).value">
+</section>
+
+</form>
+<button  class="w-75 btn btn-lg btn-primary" (click)="gerarEncurtado()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Gerar Link Encurtado</button>
+
+<button  class="btn btn-info w-50" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="resgatar()">Buscar Links Gerados</button>
+
+
+<app-navbar [label]="resultadogerado" ></app-navbar>
+
+<ng-template [ngIf]="view">
+  <app-list  [lab]="listagerada" ></app-list>
+</ng-template>
+
+
+
